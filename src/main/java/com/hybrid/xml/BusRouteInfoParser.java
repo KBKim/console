@@ -21,7 +21,6 @@ import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
 public class BusRouteInfoParser {
-
 	static Log log = LogFactory.getLog(BusRouteInfoParser.class);
 	
 	DocumentBuilderFactory dFactory;
@@ -34,15 +33,12 @@ public class BusRouteInfoParser {
 		builder = dFactory.newDocumentBuilder();
 		
 		tFactory = TransformerFactory.newInstance();
-	}
-	
+	}	
 	public static void main(String[] args) {
 		try {
 			
-			BusRouteInfoParser parser = new BusRouteInfoParser();
-			
-			String xml = parser.getBusRouteList("4412");
-			
+			BusRouteInfoParser parser = new BusRouteInfoParser();			
+			String xml = parser.getBusRouteList("4412");			
 			System.out.println(xml);
 			
 		} catch (ParserConfigurationException e) {
@@ -52,20 +48,15 @@ public class BusRouteInfoParser {
 		
 		log.info("Program end...");
 		
-	}
-	
+	}	
 	public String getBusRouteList(String strSrch) {
 		log.info("getBusRouteList = " + strSrch);
 		String url = "http://ws.bus.go.kr/api/rest/busRouteInfo/getBusRouteList?strSrch=" + strSrch + "&ServiceKey=AaxqTg02PVW%2BZhaIkh4fVAIiknK6EU6ZkfT1lQEHEo2PRlldpzfhjoBwE63YKQGpiY4JdZCjCktTW2yatRX%2FgA%3D%3D";
 		
 		String result=null;
-		try {
-			
+		try {			
 			//Unmarshall(Deserialization)
 			Document document = builder.parse(url);
-			
-			//
-			
 			//Marshall (Serialization)
 			Transformer transformer = tFactory.newTransformer();
 			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
@@ -92,7 +83,6 @@ public class BusRouteInfoParser {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		return result;
 	}
 }

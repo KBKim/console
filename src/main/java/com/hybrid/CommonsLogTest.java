@@ -1,5 +1,4 @@
 package com.hybrid;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,18 +14,13 @@ public class CommonsLogTest {
 	
 	static Log log = LogFactory.getLog(CommonsLogTest.class);
 	
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) {		
 		String url = "http://ws.bus.go.kr/api/rest/busRouteInfo/getBusRouteList?strSrch=542&ServiceKey=AaxqTg02PVW%2BZhaIkh4fVAIiknK6EU6ZkfT1lQEHEo2PRlldpzfhjoBwE63YKQGpiY4JdZCjCktTW2yatRX%2FgA%3D%3D";
 		
-		try {
-			
-			URL u = new URL(url);
-			
-			InputStream in = u.openStream();
-			
-			Reader r = new InputStreamReader(in);
-			
+		try {			
+			URL u = new URL(url);			
+			InputStream in = u.openStream();			
+			Reader r = new InputStreamReader(in);			
 			BufferedReader reader = new BufferedReader(r);
 			
 			String line = null;
@@ -37,10 +31,8 @@ public class CommonsLogTest {
 			reader.close();
 			
 		} catch (MalformedURLException e) {
-
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
