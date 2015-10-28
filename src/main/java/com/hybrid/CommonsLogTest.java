@@ -1,6 +1,8 @@
 package com.hybrid;
 
 import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.MalformedURLException;
@@ -8,7 +10,6 @@ import java.net.URL;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.omg.CORBA.portable.InputStream;
 
 public class CommonsLogTest {
 	
@@ -37,6 +38,9 @@ public class CommonsLogTest {
 			
 		} catch (MalformedURLException e) {
 
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
