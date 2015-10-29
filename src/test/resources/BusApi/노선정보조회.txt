@@ -9,5 +9,14 @@
 	http://ws.bus.go.kr/api/rest/busRouteInfo/getBusRouteList?strSrch=542&ServiceKey=AaxqTg02PVW%2BZhaIkh4fVAIiknK6EU6ZkfT1lQEHEo2PRlldpzfhjoBwE63YKQGpiY4JdZCjCktTW2yatRX%2FgA%3D%3D
 	
 	
+OXM (Object XML Mapping) 
+	- DOM Path(수동) 
+	- JAXB (자동매핑)
+ORM (Object Relational Mapping) 
+	- JDBC Programming(수동)
+	- myBatis(자동매핑)
+
+Validation(검증)처리 
+	- Regular Expression
 	
 	
