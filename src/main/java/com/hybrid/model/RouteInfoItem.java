@@ -14,6 +14,7 @@ public class RouteInfoItem {
 	private int routeType;
 	private String stStationNm;
 	private String term;
+	
 	public String getBusRouteId() {
 		return busRouteId;
 	}
