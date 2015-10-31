@@ -25,23 +25,18 @@ public class CommonsLogTest {
 			
 			String line = null;
 			while((line = reader.readLine()) != null) {
-				log.info(line);;
-			}
-					
+				log.info(line);
+			}					
 			reader.close();
 			
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		
-	}
-	
-	public static void test1() {
-		
-		log.info("Hello Commons Logging..");
-		
+		}		
+	}	
+	public static void test1() {		
+		log.info("Hello Commons Logging..");		
 		for(int i=0; i<10; i++) {
 			log.info("i =  " + i);
 		}

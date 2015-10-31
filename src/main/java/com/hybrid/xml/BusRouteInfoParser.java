@@ -35,10 +35,8 @@ public class BusRouteInfoParser {
 	static Log log = LogFactory.getLog(BusRouteInfoParser.class);
 	
 	DocumentBuilderFactory dFactory;
-	DocumentBuilder builder;
-	
-	XPathFactory xFactory;
-	
+	DocumentBuilder builder;	
+	XPathFactory xFactory;	
 	TransformerFactory tFactory;
 	
 	public BusRouteInfoParser() throws ParserConfigurationException {
@@ -49,10 +47,8 @@ public class BusRouteInfoParser {
 	}	
 	
 	public static void main(String[] args) {
-		try {
-			
-			BusRouteInfoParser parser = new BusRouteInfoParser();	
-			
+		try {			
+			BusRouteInfoParser parser = new BusRouteInfoParser();				
 			List<RouteInfoItem> list = parser.getBusRouteList("6628");
 			log.info("list size = " +list.size());
 			
@@ -127,19 +123,14 @@ public class BusRouteInfoParser {
 			System.out.println(result);
 			
 		} catch (SAXException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (TransformerConfigurationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (TransformerException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (XPathExpressionException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return model;
